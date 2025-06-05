@@ -1,0 +1,64 @@
+body {
+  background-color: #111;
+  color: #0f0;
+  font-family: monospace;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
+
+canvas {
+  background-color: #222;
+  border: 2px solid #0f0;
+  margin-top: 20px;
+}
+
+button {
+  background-color: #0f0;
+  color: #111;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0a0;
+}
+
+.hidden {
+  display: none;
+}
+
+#countdown {
+  font-size: 48px;
+  color: red;
+  margin-top: 20px;
+}
+
+#pauseMenu {
+  margin-top: 20px;
+}
+
+#pauseMenu button {
+  background-color: #0f0;
+  color: #111;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#pauseMenu button:hover {
+  background-color: #0a0;
+}
+
+#settingsMenu {
+  margin-top: 20px;
+  color: #0f0;
+}
+#settingsMenu input {
+  transform: scale(1.5);
+}

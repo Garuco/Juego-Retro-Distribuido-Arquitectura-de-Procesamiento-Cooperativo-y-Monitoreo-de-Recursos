@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Snake Retro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Snake Retro</h1>
+
+  <!-- Menú principal -->
+  <div id="menu">
+    <button onclick="startGame()">Start</button>
+    <button onclick="loadGame()">Load</button>
+    <button onclick="openSettings()">Settings</button>
+    <button onclick="quitGame()">Quit Game</button>
+  </div>
+
+  <!-- Menú pausa -->
+  <div id="pauseMenu" class="hidden">
+    <h2>Juego en Pausa</h2>
+    <button onclick="resumeGame()">Continue</button>
+    <button onclick="saveAndQuit()">Save and Quit</button>
+    <button onclick="quitToMenu()">Quit</button>
+  </div>
+
+  <!-- Menú ajustes -->
+  <div id="settingsMenu" class="hidden">
+    <h2>Settings</h2>
+    <label>
+      <input type="checkbox" id="soundToggle" checked onchange="toggleSound()">
+      Sonido activado
+    </label>
+    <br><br>
+    <button onclick="backToMenu()">Volver</button>
+  </div>
+
+  <!-- Contador -->
+  <div id="countdown" class="hidden">3</div>
+
+  <!-- Juego -->
+  <canvas id="gameCanvas" width="400" height="400" class="hidden"></canvas>
+
+  <script src="snake.js"></script>
+</body>
+</html>
