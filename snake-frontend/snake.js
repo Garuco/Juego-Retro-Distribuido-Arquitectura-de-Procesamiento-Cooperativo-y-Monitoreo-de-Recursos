@@ -39,7 +39,6 @@ function playSound(sound) {
   }
 }
 
-// Teclado
 document.addEventListener("keydown", (event) => {
   if (event.key === "p" || event.key === "P") {
     if (!isPaused && !gameOver && !canvas.classList.contains("hidden")) {
@@ -112,11 +111,9 @@ function draw() {
     snake.pop();
   }
 
-  // Actualizar puntuación en el contenedor
   scoreDisplay.textContent = "Puntuación: " + score;
 }
 
-// ========== Funciones de menú ==========
 function startGame() {
   menu.classList.add("hidden");
   countdownEl.classList.remove("hidden");
@@ -129,7 +126,7 @@ function startGame() {
       clearInterval(countdown);
       countdownEl.classList.add("hidden");
       canvas.classList.remove("hidden");
-      gameInfo.classList.remove("hidden"); // Mostrar puntuación y botón de pausa
+      gameInfo.classList.remove("hidden");
       initGame();
     } else {
       countdownEl.textContent = counter;
@@ -150,21 +147,21 @@ function initGame() {
 
 function returnToMenu() {
   canvas.classList.add("hidden");
-  gameInfo.classList.add("hidden"); // Ocultar puntuación y botón de pausa
+  gameInfo.classList.add("hidden");
   menu.classList.remove("hidden");
 }
 
 function pauseGame() {
   isPaused = true;
   clearInterval(intervalId);
-  pauseButton.classList.add("hidden"); // Ocultar botón de pausa
+  pauseButton.classList.add("hidden");
   pauseMenu.classList.remove("hidden");
 }
 
 function resumeGame() {
   isPaused = false;
   pauseMenu.classList.add("hidden");
-  pauseButton.classList.remove("hidden"); // Mostrar botón de pausa
+  pauseButton.classList.remove("hidden");
   intervalId = setInterval(draw, 100);
 }
 
