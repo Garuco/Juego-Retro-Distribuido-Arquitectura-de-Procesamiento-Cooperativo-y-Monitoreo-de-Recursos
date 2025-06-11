@@ -1,6 +1,6 @@
 body {
-  background-color: #111;
-  color: #0f0;
+  background-color: #1a1a1a; /* Fondo oscuro */
+  color: #f4f4f4; /* Texto claro */
   font-family: monospace;
   text-align: center;
   margin: 0;
@@ -8,23 +8,24 @@ body {
 }
 
 canvas {
-  background-color: #222;
-  border: 2px solid #0f0;
+  background-color: #2b2b2b; /* Fondo del área de juego */
+  border: 2px solid #ffcc00; /* Borde amarillo retro */
   margin-top: 20px;
 }
 
 button {
-  background-color: #0f0;
-  color: #111;
+  background-color: #ff5733; /* Naranja retro */
+  color: #f4f4f4; /* Texto claro */
   border: none;
   padding: 10px 20px;
   margin: 10px;
   font-size: 16px;
   cursor: pointer;
+  border-radius: 5px; /* Bordes redondeados */
 }
 
 button:hover {
-  background-color: #0a0;
+  background-color: #c70039; /* Rojo oscuro retro */
 }
 
 .hidden {
@@ -33,7 +34,7 @@ button:hover {
 
 #countdown {
   font-size: 48px;
-  color: red;
+  color: #ffcc00; /* Amarillo retro */
   margin-top: 20px;
 }
 
@@ -42,23 +43,50 @@ button:hover {
 }
 
 #pauseMenu button {
-  background-color: #0f0;
-  color: #111;
+  background-color: #33ff57; /* Verde retro */
+  color: #1a1a1a; /* Texto oscuro */
   border: none;
   padding: 10px 20px;
   margin: 10px;
   font-size: 16px;
   cursor: pointer;
+  border-radius: 5px;
 }
 
 #pauseMenu button:hover {
-  background-color: #0a0;
+  background-color: #28a745; /* Verde oscuro retro */
 }
 
 #settingsMenu {
   margin-top: 20px;
-  color: #0f0;
+  color: #f4f4f4; /* Texto claro */
 }
+
 #settingsMenu input {
   transform: scale(1.5);
+}
+
+#gameInfo {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#scoreDisplay {
+  font-size: 24px;
+  color: #ffcc00; /* Amarillo retro */
+  margin-bottom: 10px;
+}
+
+#pauseButton {
+  background-color: #33aaff; /* Azul retro */
+  color: #1a1a1a; /* Texto oscuro */
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#pauseButton:hover {
+  background-color: #007bff; /* Azul oscuro retro */
 }
