@@ -11,23 +11,20 @@
 
   <!-- Menú principal -->
   <div id="menu">
-    <button onclick="startGame()">Start</button>
-    <button onclick="loadGame()">Load</button>
-    <button onclick="openSettings()">Settings</button>
-    <button onclick="quitGame()">Quit Game</button>
+    <button onclick="startGame()">Iniciar Juego</button>
+    <button onclick="openSettings()">Configuraciones</button>
   </div>
 
   <!-- Menú pausa -->
   <div id="pauseMenu" class="hidden">
     <h2>Juego en Pausa</h2>
-    <button onclick="resumeGame()">Continue</button>
-    <button onclick="saveAndQuit()">Save and Quit</button>
-    <button onclick="quitToMenu()">Quit</button>
+    <button onclick="resumeGame()">Continuar</button>
+    <button onclick="quitToMenu()">Salir</button>
   </div>
 
   <!-- Menú ajustes -->
   <div id="settingsMenu" class="hidden">
-    <h2>Settings</h2>
+    <h2>Configuraciones</h2>
     <label>
       <input type="checkbox" id="soundToggle" checked onchange="toggleSound()">
       Sonido activado
@@ -41,6 +38,12 @@
 
   <!-- Juego -->
   <canvas id="gameCanvas" width="400" height="400" class="hidden"></canvas>
+
+  <!-- Contenedor de puntuación y botón de pausa -->
+  <div id="gameInfo" class="hidden">
+    <div id="scoreDisplay">Puntuación: 0</div>
+    <button id="pauseButton" onclick="pauseGame()">Pausar</button>
+  </div>
 
   <script src="snake.js"></script>
 </body>
